@@ -1,0 +1,117 @@
+.user-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; /* Default value, can be omitted */
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.form-example {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	background-color: #f2f2f2;
+	border-radius: 5px;
+}
+
+h2 {
+	text-align: center;
+	font-size: 28px;
+	color: #333;
+	margin-bottom: 30px;
+}
+
+label {
+	font-size: 18px;
+	font-weight: bold;
+	display: block;
+	margin-bottom: 10px;
+	color: #666;
+}
+
+input[type="text"], input[type="email"], select {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+
+input[type="submit"] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+input[type="submit"]:hover {
+	background-color: #45a049;
+}
+
+span {
+	color: red;
+}
+
+.pet-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.pet {
+	width: 300px;
+	margin-bottom: 30px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.pet img {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.pet h3 {
+	font-size: 24px;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.pet p {
+	font-size: 18px;
+	margin-bottom: 10px;
+	color: #666;
+}
+
+.adopt-button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.adopt-button.disabled {
+opacity: 0.5;
+cursor: not-allowed;
+}
+
+.adopt-button:hover {
+	background-color: #45a049;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
