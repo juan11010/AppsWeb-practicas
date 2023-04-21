@@ -40,13 +40,17 @@ try {
     <h2>Bienvenido <?php echo $user; ?></h2>
     <table>
         <tr>
-            <th>ID Adopcion</th>
-            <th>Nombre Mascota</th>
-            <th>Nombre Persona</th>
-            <th>Fecha de Adopcion</th>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Especie</th>
+            <th>Edad</th>
+            <th>Descripcion</th>
+            <th>Adoptado</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
         </tr>
         <?php
-        $sql = "SELECT adopciones.id, animales.nombre AS nombre_mascota, personas.nombre AS nombre_persona, adopciones.fecha_adopcion FROM adopciones JOIN animales ON adopciones.id_animal = animales.id JOIN personas ON adopciones.id_persona = personas.id";
+        $sql = "SELECT * FROM animales";
         $stmt = $db->prepare($sql);
         $stmt->execute();
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -54,18 +58,18 @@ try {
         foreach ($results as $row) {
             echo '<tr>';
             echo '<td>' . $row['id'] . '</td>';
-            echo '<td>' . $row['nombre_mascota'] . '</td>';
-            echo '<td>' . $row['nombre_persona'] . '</td>';
-            echo '<td>' . $row['fecha_adopcion'] . '</td>';
+            echo '<td>' . $row['nombre'] . '</td>';
+            echo '<td>' . $row['especie'] . '</td>';
+            echo '<td>' . $row['edad'] . '</td>';
+            echo '<td>' . $row['descripcion'] . '</td>';
+            echo '<td>' . $row['adoptado'] . '</td>';
+            echo '<td><a href="editarMascota.php?id=' . $row['id'] . '"><button type="button" class="adopt-button"><i class="fa-solid fa-edit"></i></button></a></td>';
+            echo '<td><a href="eliminarMascota.php?id=' . $row['id'] . '"><button type="button" class="adopt-button"><i class="fa-solid fa-trash"></i></button></a></td>';
             echo '</tr>';
         }
         ?>
     </table>
     <br><br>
-    <div class="button-container">
-        <a href="generarPDF.php"><button type="button" class="adopt-button"><i class="fa-solid fa-file-pdf fa-2x"></i></button></a>
-    </div>
-
 </body>
 
 </html>

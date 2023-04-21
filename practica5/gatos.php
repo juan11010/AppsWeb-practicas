@@ -17,7 +17,7 @@ if (!isset($_SESSION['username'])) {
 
 <body>
     <?php
-    $conn = new mysqli("localhost", "root", "root", "adopcion_mascotas");
+    $conn = new mysqli("localhost", "root", "", "adopcion_mascotas");
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);

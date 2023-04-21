@@ -6,7 +6,7 @@ if(isset($_POST['login'])) {
     $password = $_POST['password'];
 
     // Validate user credentials against the database
-    $db = mysqli_connect("localhost", "root", "root", "adopcion_mascotas");
+    $db = mysqli_connect("localhost", "root", "", "adopcion_mascotas");
     $query = "SELECT * FROM personas WHERE nombre='$username' AND password='$password'";
     $result = mysqli_query($db, $query);
     //get the id of the user and store it in a session variables

@@ -4,7 +4,7 @@ require_once('tcpdf/tcpdf.php');
 $host = 'localhost';
 $dbname = 'adopcion_mascotas';
 $username = 'root';
-$password = 'root';
+$password = '';
 
 try {
     $db = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);

@@ -25,7 +25,7 @@ if (!isset($_SESSION['username'])) {
         <a href="logout.php" style="float: right;">Cerrar Sesion</a>
     </div>
     <?php
-    $conn = new mysqli("localhost", "root", "root", "adopcion_mascotas");
+    $conn = new mysqli("localhost", "root", "", "adopcion_mascotas");
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
